@@ -1,0 +1,211 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.editor, .editor-layover {
+  width: 100%;
+  height: 90%;
+  border: none;
+  font-size: 2em;
+  outline: none;
+  padding: 5%;
+}
+
+.editor-layover {
+  opacity: 0.5;  
+  z-index: 100;
+  display: none;
+  background-color: lightgrey;
+}
+
+.bottom-pane {
+    width: 100%;
+    height: 10%;
+    background-color: #F8F8F8;
+    border-top: 2px solid #d3d3d3;
+}
+
+.horizontal-center {
+  margin: 0 auto;   /* to align it centrally */
+  display: table;
+  position: relative;
+}
+
+.save-button
+{
+  height: 70%;
+  top: 15%;
+  background: #eeeeee; /* Old browsers */
+  background: -moz-linear-gradient(top, #eeeeee 0%, #eeeeee 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #eeeeee 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #eeeeee 0%,#eeeeee 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #eeeeee 0%,#eeeeee 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(top, #eeeeee 0%,#eeeeee 100%); /* W3C */
+  border: 1px solid #d3d3d3;
+  font: bold 1em/2em Arial, Helvetica;
+  text-decoration: none;
+  color: #333;
+  border-radius: .2em;
+  cursor: pointer;
+  padding: 0px;
+  box-sizing: border-box;
+
+}
+
+.save-button.disabled {
+  cursor: auto;
+  opacity: 0.4;
+}
+
+.save-button:before
+{
+  float: left;
+  width: 1em;
+  text-align: center;
+  font-size: 2.7em;
+  pointer-events: none;
+  content: "\1F4BE";
+  padding: 0.2em .2em;
+}
+
+.editor, .editor-layover, .bottom-pane {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  position: absolute;
+}
+
+.toast-area {
+  display: none;
+  z-index: 200;
+}
+
+.editor, .editor-layover {
+  left: 0;
+  top: 0;
+}
+
+.bottom-pane {
+  right: 0;
+  bottom: 0;
+}
+
+.toast-area {
+    z-index: 200;
+    font-size: 1.5em;
+    font-family: sans-serif;
+    color: grey;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: lightgrey;
+}
+
+.not-found-content {
+  padding: 15%;
+  font-size: 1.5em;
+}
+
+.not-found-content .description {
+  font-size: 1.3em;
+  color: #b3b3b3;
+}
+
+.not-found-content .not-found-icon::before {
+  content: "";
+}
+
+/*
+CSS for spinner
+*/
+.cssload-whirlpool,
+.cssload-whirlpool::before,
+.cssload-whirlpool::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 1px solid rgb(204,204,204);
+	border-left-color: rgb(0,0,0);
+	border-radius: 974px;
+		-o-border-radius: 974px;
+		-ms-border-radius: 974px;
+		-webkit-border-radius: 974px;
+		-moz-border-radius: 974px;
+}
+
+.cssload-whirlpool::after {
+  content: "saving";
+}
+
+.cssload-whirlpool {
+	margin: -24px 0 0 -24px;
+	height: 49px;
+	width: 49px;
+	animation: cssload-rotate 1150ms linear infinite;
+		-o-animation: cssload-rotate 1150ms linear infinite;
+		-ms-animation: cssload-rotate 1150ms linear infinite;
+		-webkit-animation: cssload-rotate 1150ms linear infinite;
+		-moz-animation: cssload-rotate 1150ms linear infinite;
+}
+
+.cssload-whirlpool::before {
+	content: "";
+	margin: -22px 0 0 -22px;
+	height: 43px;
+	width: 43px;
+	animation: cssload-rotate 1150ms linear infinite;
+		-o-animation: cssload-rotate 1150ms linear infinite;
+		-ms-animation: cssload-rotate 1150ms linear infinite;
+		-webkit-animation: cssload-rotate 1150ms linear infinite;
+		-moz-animation: cssload-rotate 1150ms linear infinite;
+}
+
+.cssload-whirlpool::after {
+	content: "";
+	margin: -28px 0 0 -28px;
+	height: 55px;
+	width: 55px;
+	animation: cssload-rotate 2300ms linear infinite;
+		-o-animation: cssload-rotate 2300ms linear infinite;
+		-ms-animation: cssload-rotate 2300ms linear infinite;
+		-webkit-animation: cssload-rotate 2300ms linear infinite;
+		-moz-animation: cssload-rotate 2300ms linear infinite;
+}
+
+
+
+@keyframes cssload-rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@-o-keyframes cssload-rotate {
+	100% {
+		-o-transform: rotate(360deg);
+	}
+}
+
+@-ms-keyframes cssload-rotate {
+	100% {
+		-ms-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes cssload-rotate {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-moz-keyframes cssload-rotate {
+	100% {
+		-moz-transform: rotate(360deg);
+	}
+}
